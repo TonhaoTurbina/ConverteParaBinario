@@ -2,7 +2,7 @@ def obter_numero():
     """ Evita o usuário de colocar um input inválido. """
     while True:
         try:
-            inteiro = int(input('Digite um número inteiro: '))
+            inteiro = int(input('Digite um número inteiro ou 0 para encerrar: '))
             return inteiro
         except ValueError:
             print('Número digitado inválido. Tente novamente.')
