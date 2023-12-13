@@ -7,3 +7,4 @@
 
 ## Uso
   Para executar o programa basta abrir o arquivo Binario.exe
+
