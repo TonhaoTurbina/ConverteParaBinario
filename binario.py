@@ -9,19 +9,18 @@ def obter_numero():
 
 def converte_binario(num):
     """ Converte o número inteiro para binário e adiciona os 8 digitos. """
-    if num >= 0:
-        binario_absoluto = bin(num)[2:]
-        binario_completo = binario_absoluto.zfill(8)
-    else:
-        binario_absoluto = bin(num & ((1 << 8) - 1))[2:]
-        binario_completo = binario_absoluto.zfill(8)
+    binario_absoluto = bin(num & ((1 << 8) - 1))[2:]
+    binario_completo = binario_absoluto.zfill(8)
 
     return binario_completo
 
 def main():
-    inteiro = obter_numero()
-    binario = converte_binario(inteiro)
-    print(f'O {inteiro} em binário é {binario[:4]} {binario[4:]}')
+    while True:
+        inteiro = obter_numero()
+        if inteiro == 0:
+            break
+        binario = converte_binario(inteiro)
+        print(f'O {inteiro} em binário é {binario[:4]} {binario[4:]}')
 
 if __name__ == '__main__':
     main()
