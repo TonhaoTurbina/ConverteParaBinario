@@ -20,7 +20,7 @@ def main():
         if inteiro == 0:
             break
         binario = converte_binario(inteiro)
-        print(f'O {inteiro} em binário é {binario[:4]} {binario[4:]}')
+        print(f'O número {inteiro} em binário é {binario[:4]} {binario[4:]}')
 
 if __name__ == '__main__':
     main()
