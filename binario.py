@@ -1,8 +1,8 @@
-def obter_numero_positivo():
-    """Evita o usuário de colocar um input inválido."""
+def obter_numero():
+    """ Evita o usuário de colocar um input inválido. """
     while True:
         try:
-            inteiro = int(input('Digite um número inteiro não negativo: '))
+            inteiro = int(input('Digite um número inteiro: '))
             if inteiro >= 0:
                 return inteiro
             else:
@@ -10,19 +10,14 @@ def obter_numero_positivo():
         except ValueError:
             print('Número digitado inválido. Tente novamente.')
 
-def inverter_string(string):
-    """Inverte uma string."""
-    return string[::-1]
-
 def converte_binario(num):
-    """Converte o número inteiro para binário."""
+    """ Converte o número inteiro para binário. """
     return bin(num)[2:]
 
 def main():
-    inteiro = obter_numero_positivo()
-    binario = converte_binario(inteiro)
-    binario_reverso = inverter_string(binario)
-    print(f'O {inteiro} em binário é {binario_reverso}')
+    inteiro_positivo = obter_numero()
+    binario = converte_binario(inteiro_positivo)
+    print(f'O {inteiro_positivo} em binário é {binario}')
 
 if __name__ == '__main__':
     main()
